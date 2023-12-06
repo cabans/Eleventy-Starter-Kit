@@ -48,3 +48,19 @@ It will be transpiled and minified in production. The output is in `dist/assets/
 - [ ] Add `sitemap.xml` support
 - [ ] Add `manifest.json` support
 
+## Credits
+
+* [Eleventy](https://www.11ty.dev/)
+* [Sass](https://sass-lang.com/)
+* [Webpack](https://webpack.js.org/)
+* [Babel](https://babeljs.io/)
+
+### Hardly inspired by 💖
+
+* [Eleventastic by Max Böck](https://github.com/maxboeck/eleventastic)
+* [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog)
+* [Starter Kit v4 - Eleventy Blog + Netlify CMS](https://github.com/Oak-Harbor-Kits/Starter-Kit-V4-Eleventy)
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
