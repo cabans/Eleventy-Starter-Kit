@@ -7,6 +7,8 @@ A simple [Eleventy](https://www.11ty.dev/) (11ty) Starter Kit, that it works as 
 * CSS working with Sass
 * CSS clean and minification on production
 * JS Bundling via 11ty.js script (Webpack)
+* Image optimization
+* Uses Nunjucks as template engine
 * HTML ninification
 * Everything runs through Eleventy
 * i18n support by default
