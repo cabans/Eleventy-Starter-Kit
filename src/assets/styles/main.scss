@@ -1,0 +1,30 @@
+$font-family-sans-serif: 'Noto Sans', sans-serif;
+
+body {
+  font-family: $font-family-sans-serif;
+  line-height: 1.5;
+  background-color: greenyellow;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    margin-block-end: 0;
+}
+
+nav {
+    font-weight: bold;;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+picture {
+    max-width: 100%;
+    outline: 3px solid #ffcc00;
+
+    img {
+        display: block;
+    }
+}
