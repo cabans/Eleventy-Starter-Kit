@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Eleventy Starter Kit</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+        <script src="{{ '/assets/scripts/main.js' | url }}" defer></script>
+    </head>
+
+    <body>
+        {% include "header.njk" %}
+        <h1>Hola mundo!</h1>
+
+        {% image "src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg", "Foto de Alin Andersen de una montaña en Austria", "image-class" %}
+
+    </body>
+
+</html>
