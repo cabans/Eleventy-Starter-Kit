@@ -4,8 +4,10 @@ const path = require("path");
 const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 
 module.exports = function (eleventyConfig) {
+    // Add cache busting
     eleventyConfig.addPlugin(eleventyAutoCacheBuster);
-    // Watch CSS files for changes
+
+    // Watch CSS files for changes to inject CSS without a page refresh
     eleventyConfig.setServerOptions({
         watch: ["dist/**/*.css"],
         domDiff: true,
@@ -34,8 +36,6 @@ module.exports = function (eleventyConfig) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);
         }
 
-        console.log(`Generating image(s) from:  ${src}`)
-
         let metadata = await Image(src, {
             widths: ["auto"],
             formats: ["webp", "jpeg"],
@@ -48,18 +48,12 @@ module.exports = function (eleventyConfig) {
             }
         });
 
-        let imageAttributes = {
-            class: className,
-            alt,
-            sizes,
-            loading: "lazy",
-            decoding: "async",
-        };
-
         let lowsrc = metadata.jpeg[0];
 
         // You bet we throw an error on a missing alt (alt="" works okay)
         // return Image.generateHTML(metadata, imageAttributes);
+
+        // Custom format img element returning HTML
         return `<picture class="${className}">
         ${Object.values(metadata).map(imageFormat => {
             return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
