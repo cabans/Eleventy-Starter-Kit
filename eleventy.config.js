@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
     // Localization
     eleventyConfig.addPlugin(EleventyI18nPlugin, {
         // any valid BCP 47-compatible language tag is supported
-        defaultLanguage: "es", // Required, this site uses "es"
+        defaultLanguage: "en", // Required, this site uses "es"
         errorMode: "strict",
         filters: {
             // transform a URL with the current page’s locale code
