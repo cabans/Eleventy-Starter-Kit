@@ -2,9 +2,12 @@
 
 A simple [Eleventy](https://www.11ty.dev/) (11ty) Starter Kit, that it works as base for all my static projects. 
 
+⚠️ This project is a work in progress, you have been warned 😊
+
+
 ## Key Features
 
-* CSS working with Sass
+* CSS working with Sass (SCSS syntax)
 * CSS clean and minification on production
 * JS Bundling via 11ty.js script (Webpack)
 * Image optimization
