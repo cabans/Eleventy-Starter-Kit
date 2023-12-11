@@ -2,11 +2,16 @@
 
 A simple [Eleventy](https://www.11ty.dev/) (11ty) Starter Kit, that it works as base for all my static projects. 
 
+⚠️ This project is a work in progress, you have been warned 😊
+
+
 ## Key Features
 
-* CSS working with Sass
+* CSS working with Sass (SCSS syntax)
 * CSS clean and minification on production
 * JS Bundling via 11ty.js script (Webpack)
+* Image optimization
+* Uses Nunjucks as template engine
 * HTML ninification
 * Everything runs through Eleventy
 * i18n support by default
@@ -48,3 +53,19 @@ It will be transpiled and minified in production. The output is in `dist/assets/
 - [ ] Add `sitemap.xml` support
 - [ ] Add `manifest.json` support
 
+## Credits
+
+* [Eleventy](https://www.11ty.dev/)
+* [Sass](https://sass-lang.com/)
+* [Webpack](https://webpack.js.org/)
+* [Babel](https://babeljs.io/)
+
+### Hardly inspired by 💖
+
+* [Eleventastic by Max Böck](https://github.com/maxboeck/eleventastic)
+* [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog)
+* [Starter Kit v4 - Eleventy Blog + Netlify CMS](https://github.com/Oak-Harbor-Kits/Starter-Kit-V4-Eleventy)
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
