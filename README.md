@@ -4,7 +4,6 @@ A simple [Eleventy](https://www.11ty.dev/) (11ty) Starter Kit, that it works as 
 
 ⚠️ This project is a work in progress, you have been warned 😊
 
-
 ## Key Features
 
 * CSS working with Sass (SCSS syntax)
@@ -21,7 +20,10 @@ A simple [Eleventy](https://www.11ty.dev/) (11ty) Starter Kit, that it works as 
 To install the necessary packages, run the command on your package manager flavor of choice:
 
 ```sh
+# Node Package Manager
 npm install
+
+# Yarn
 yarn
 ```
 
@@ -43,7 +45,7 @@ It will be transpiled and minified in production. The output is in `dist/assets/
 
 ## TODO
 
-- [ ] Use layouts for pages
+- [x] Use layouts for pages
 - [ ] Add partials for common elements
 - [ ] Move transforms to `src/utils` folder
 - [ ] Move filters to `src/utils` folder
