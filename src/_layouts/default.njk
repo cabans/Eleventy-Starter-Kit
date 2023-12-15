@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir or 'ltr' }}">
+	<head>
+		<title>Eleventy Starter Kit</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+
+	</head>
+
+	<body>
+		<a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+		{% include "partials/header.njk" %}
+
+		<main id="main-content" class="main-content">
+			{{ content | safe }}
+		</main>
+
+		{% include "partials/footer.njk" %}
+
+		<script src="{{ '/assets/scripts/main.js' | url }}" defer></script>
+	</body>
+
+</html>
