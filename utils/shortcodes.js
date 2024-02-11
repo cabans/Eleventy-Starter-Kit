@@ -1,4 +1,5 @@
 const Image = require("@11ty/eleventy-img");
+const path = require("path");
 
 module.exports = {
 	image: async function(src, alt, className, sizes) {
@@ -7,8 +8,8 @@ module.exports = {
 			throw new Error(`Missing \`alt\` on myImage from: ${src}`);
 		}
 
-		let metadata = await Image(src, {
-			widths: [320, 1024, 2560],
+		let metadata = await Image(`${src}`, {
+			widths: [320, 1024, 1920],
 			formats: ["webp", "jpeg"],
 			urlPath: "/assets/img/",
 			outputDir: "./dist/assets/img/",
