@@ -1,11 +1,12 @@
 $font-family-sans-serif: 'Inter', sans-serif;
 $primary: red;
+$background: lightgray;
 
 
 body {
 	font-family: $font-family-sans-serif;
 	line-height: 1.5;
-	background-color: #f2f2f2;
+	background-color: $background;
 }
 
 h1 {
@@ -19,8 +20,8 @@ img {
 }
 
 picture {
+	display: block;
 	max-width: 64rem;
-	outline: 3px solid $primary;
 
 	img {
 		display: block;
@@ -48,4 +49,12 @@ nav {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+}
+
+.image-sm {
+	max-width: 30rem;
+}
+
+.image-xs {
+	max-width: 20rem;
 }
