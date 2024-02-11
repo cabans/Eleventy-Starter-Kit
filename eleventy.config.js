@@ -1,18 +1,19 @@
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
-const Image = require("@11ty/eleventy-img");
 const path = require("path");
 const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 
-module.exports = function (eleventyConfig) {
-	// Add cache busting
-	eleventyConfig.addPlugin(eleventyAutoCacheBuster);
+const shortcodes = require('./utils/shortcodes.js');
 
+module.exports = function (eleventyConfig) {
 	// Watch CSS files for changes to inject CSS without a page refresh
 	eleventyConfig.setServerOptions({
 		watch: ["dist/**/*.css"],
 		domDiff: true,
 		liveReload: true
 	});
+
+	// Asset Watch Targets for scripts
+	eleventyConfig.addWatchTarget('./src/assets/scripts')
 
 	// Localization
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -28,48 +29,10 @@ module.exports = function (eleventyConfig) {
 		}
 	});
 
-	eleventyConfig.addPlugin(eleventyAutoCacheBuster);
-
-	eleventyConfig.addShortcode("image", async function (src, alt, className, sizes) {
-		if (alt === undefined) {
-			// You bet we throw an error on missing alt (alt="" works okay)
-			throw new Error(`Missing \`alt\` on myImage from: ${src}`);
-		}
-
-		let metadata = await Image(src, {
-			widths: [320, 1024, 2560],
-			formats: ["webp", "jpeg"],
-			urlPath: "/assets/img/",
-			outputDir: "./dist/assets/img/",
-			filenameFormat: function (id, src, width, format, options) {
-				const extension = path.extname(src);
-				const name = path.basename(src, extension);
-				return `${name}-${width}w.${format}`;
-			}
-		});
-
-		let lowsrc = metadata.jpeg[0];
-
-		// You bet we throw an error on a missing alt (alt="" works okay)
-		// return Image.generateHTML(metadata, imageAttributes);
-
-		// Custom format img element returning HTML
-		return `<picture class="${className}">
-        ${Object.values(metadata).map(imageFormat => {
-			return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
-		}).join("\n")}
-          <img
-            src="${lowsrc.url}"
-            width="${lowsrc.width}"
-            height="${lowsrc.height}"
-            alt="${alt}"
-            loading="lazy"
-            decoding="async">
-        </picture>`;
-	});
-
-	// Asset Watch Targets
-	eleventyConfig.addWatchTarget('./src/assets/scripts')
+    // Shortcodes
+    Object.keys(shortcodes).forEach((shortcodeName) => {
+        eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
+    })
 
 	// Pass-through files
 	// eleventyConfig.addPassthroughCopy('src/robots.txt')
@@ -77,6 +40,8 @@ module.exports = function (eleventyConfig) {
 	// eleventyConfig.addPassthroughCopy('src/assets/img')
 	// eleventyConfig.addPassthroughCopy('src/assets/fonts')
 
+	// Add cache busting
+	eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
 
 	return {
