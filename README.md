@@ -44,7 +44,7 @@ It will be transpiled and minified in production. The output is in `dist/assets/
 
 - [x] Use layouts for pages
 - [x] Add image plugin for optimization
-- [ ] Add i18n support
+- [x] Add i18n support
 - [x] Add SVG sprite support
 - [ ] Add partials for common elements
 - [ ] Move transforms to `src/utils` folder
