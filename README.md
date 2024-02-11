@@ -22,9 +22,6 @@ To install the necessary packages, run the command on your package manager flavo
 ```sh
 # Node Package Manager
 npm install
-
-# Yarn
-yarn
 ```
 
 ### Commands
@@ -46,10 +43,13 @@ It will be transpiled and minified in production. The output is in `dist/assets/
 ## TODO
 
 - [x] Use layouts for pages
+- [x] Add image plugin for optimization
+- [ ] Add i18n support
+- [x] Add SVG sprite support
 - [ ] Add partials for common elements
 - [ ] Move transforms to `src/utils` folder
 - [ ] Move filters to `src/utils` folder
-- [ ] Move shortcodes to `src/utils` folder
+- [x] Move shortcodes to `src/utils` folder
 - [ ] Add SVG sprite support
 - [ ] Add `robots.txt` support
 - [ ] Add `sitemap.xml` support
