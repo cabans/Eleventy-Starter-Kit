@@ -1,1 +1,4 @@
-import './modules/bubble'
+import './modules/module-child.js'
+
+console.log('main.js loaded')
+

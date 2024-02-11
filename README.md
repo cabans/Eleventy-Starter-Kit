@@ -2,8 +2,7 @@
 
 A simple [Eleventy](https://www.11ty.dev/) (11ty) Starter Kit, that it works as base for all my static projects. 
 
-⚠️ This project is a work in progress, you have been warned 😊
-
+⚠️ This project is a work in progress and for me to learn from scratch, you have been warned 😊
 
 ## Key Features
 
@@ -21,8 +20,8 @@ A simple [Eleventy](https://www.11ty.dev/) (11ty) Starter Kit, that it works as 
 To install the necessary packages, run the command on your package manager flavor of choice:
 
 ```sh
+# Node Package Manager
 npm install
-yarn
 ```
 
 ### Commands
@@ -43,11 +42,14 @@ It will be transpiled and minified in production. The output is in `dist/assets/
 
 ## TODO
 
-- [ ] Use layouts for pages
+- [x] Use layouts for pages
+- [x] Add image plugin for optimization
+- [ ] Add i18n support
+- [x] Add SVG sprite support
 - [ ] Add partials for common elements
 - [ ] Move transforms to `src/utils` folder
 - [ ] Move filters to `src/utils` folder
-- [ ] Move shortcodes to `src/utils` folder
+- [x] Move shortcodes to `src/utils` folder
 - [ ] Add SVG sprite support
 - [ ] Add `robots.txt` support
 - [ ] Add `sitemap.xml` support

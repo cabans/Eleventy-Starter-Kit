@@ -1,19 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Eleventy Starter Kit</title>
-        <meta charset="utf-8">
+---
+layout: default
+---
 
-        <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
-        <script src="{{ '/assets/scripts/main.js' | url }}" defer></script>
-    </head>
 
-    <body>
-        {% include "header.njk" %}
-        <h1>Hola mundo!</h1>
+<h1>Hello world!</h1>
 
-        {% image "src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg", "photo of Alin Andersen of a Mountain on Austria", "image-class" %}
+{% image "./src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg", "photo of Alin Andersen of a Mountain on Austria", "image-class", "(min-width: 30em) 50vw, 100vw" %}
 
-    </body>
+{% image
+	"./src/assets/img/pexels-pixabay-45201.jpg",
+	"photo of a cat",
+	"image-class image-sm",
+	"(min-width: 30em) 50vw, 100vw"
+%}
 
-</html>
+{% image
+	"./src/assets/img/egfinal.png",
+	"eg proto",
+	"image-class image-sm",
+	"(min-width: 50em) 50vw, 100vw"
+%}
+
+{% image
+	"./src/assets/img/crown-winner.svg",
+	"crow winner icon",
+	"icon"
+%}
+
+<div>
+{% icon "account" %}
+</div>
+
+
+
+<svg class="icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="crow winner icon">
+  <use xlink:href="/assets/icons.svg#svg-pencil-box"></use>
+</svg>
