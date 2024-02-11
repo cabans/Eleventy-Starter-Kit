@@ -1,17 +1,19 @@
 {
-  "name": "eleventy-vite-test",
+  "name": "cabans-eleventy-starter-kit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "clean": "rm -rf dist",
     "watch:sass": "sass --watch src/assets/styles/main.scss:dist/assets/styles/main.css",
     "build:sass": "sass --style=compressed --no-source-map src/assets/styles/main.scss:dist/assets/styles/main.css",
+    "build:cleancss": "npx cleancss -o dist/assets/styles/main.css dist/assets/styles/main.css",
     "watch:eleventy": "ELEVENTY_ENV=development npx @11ty/eleventy --incremental --serve",
     "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "build:cleancss": "npx cleancss -o dist/assets/styles/main.css dist/assets/styles/main.css",
+    "build:webpack": "ELEVENTY_ENV=production webpack --config webpack.config.js",
+    "watch:webpack": "ELEVENTY_ENV=development webpack --config webpack.config.js -w",
     "start": "npm-run-all build:sass --parallel watch:* --print-label",
-    "build": "npm-run-all clean build:* --print-label"
+		"build": "npm-run-all clean --parallel build:eleventy build:webpack --sequential build:sass build:cleancss"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +33,7 @@
     "webpack": "^5.89.0"
   },
   "devDependencies": {
-    "eleventy-auto-cache-buster": "^0.3.0"
+    "eleventy-auto-cache-buster": "^0.3.0",
+    "webpack-cli": "^5.1.4"
   }
 }
