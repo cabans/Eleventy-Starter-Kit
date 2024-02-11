@@ -13,7 +13,7 @@
     "build:webpack": "ELEVENTY_ENV=production webpack --config webpack.config.js",
     "watch:webpack": "ELEVENTY_ENV=development webpack --config webpack.config.js -w",
     "start": "npm-run-all build:sass --parallel watch:* --print-label",
-		"build": "npm-run-all clean --parallel build:eleventy build:webpack --sequential build:sass build:cleancss"
+    "build": "npm-run-all clean --parallel build:eleventy build:webpack --sequential build:sass build:cleancss"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "eleventy-auto-cache-buster": "^0.3.0",
+    "eleventy-plugin-svg-sprite": "^2.4.2",
     "webpack-cli": "^5.1.4"
   }
 }

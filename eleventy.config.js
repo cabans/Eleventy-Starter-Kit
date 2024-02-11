@@ -1,10 +1,17 @@
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
-const path = require("path");
 const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
-
+const svgSprite = require("eleventy-plugin-svg-sprite");
 const shortcodes = require('./utils/shortcodes.js');
 
 module.exports = function (eleventyConfig) {
+	eleventyConfig.addPlugin(svgSprite, {
+		path: "./src/assets/icons", // relative path to SVG directory
+		outputFilepath : "./dist/assets/icons.svg", // relative path to output directory
+		defaultClasses: "icon",
+		svgSpriteShortcode: "iconsprite",
+		svgShortcode: "icon"
+	});
+
 	// Watch CSS files for changes to inject CSS without a page refresh
 	eleventyConfig.setServerOptions({
 		watch: ["dist/**/*.css"],
@@ -29,10 +36,11 @@ module.exports = function (eleventyConfig) {
 		}
 	});
 
-    // Shortcodes
-    Object.keys(shortcodes).forEach((shortcodeName) => {
-        eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
-    })
+
+	// Shortcodes
+	Object.keys(shortcodes).forEach((shortcodeName) => {
+		eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
+	})
 
 	// Pass-through files
 	// eleventyConfig.addPassthroughCopy('src/robots.txt')
