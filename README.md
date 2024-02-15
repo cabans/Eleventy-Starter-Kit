@@ -46,11 +46,10 @@ It will be transpiled and minified in production. The output is in `dist/assets/
 - [x] Add image plugin for optimization
 - [ ] Add i18n support
 - [x] Add SVG sprite support
-- [ ] Add partials for common elements
+- [x] Move shortcodes to `src/utils` folder
 - [ ] Move transforms to `src/utils` folder
 - [ ] Move filters to `src/utils` folder
-- [x] Move shortcodes to `src/utils` folder
-- [ ] Add SVG sprite support
+- [ ] Add partials for common elements
 - [ ] Add `robots.txt` support
 - [ ] Add `sitemap.xml` support
 - [ ] Add `manifest.json` support
