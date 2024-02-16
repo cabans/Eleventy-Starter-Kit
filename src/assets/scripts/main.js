@@ -1,4 +1,6 @@
-import './modules/module-child.js'
+import moduleChild from './modules/module-child.js';
 
-console.log('main.js loaded')
+moduleChild();
+
+console.log('main.js is loaded')
 

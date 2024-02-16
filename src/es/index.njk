@@ -1,6 +1,29 @@
 ---
 layout: default
+lang: es
 ---
-<h1>Hola mundo!</h1>
 
-{% image "src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg", "Foto de Alin Andersen de una montaña en Austria", "image-class" %}
+<header>
+	<div class="icons">
+		{% icon "gear" %}
+		{% icon "check-circle" %}
+		{% icon "plugin" %}
+	</div>
+	<h1>¡Hola mundo!</h1>
+	<h2>Esto es un simple kit de inicia para Eleventy (11ty)</h2>
+</header>
+
+
+{% image
+	"./src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg",
+	"Foto de Alin Andersen de una montaña en Austria",
+	"hero-image wide-width",
+	"(min-width: 30em) 50vw, 100vw"
+%}
+
+<p>En el reino del código, donde los sueños digitales se tejen,
+	Yace una herramienta de poder, el Kit de Inicio de Eleventy.
+	Un faro para los constructores en la vasta extensión de la web,
+	Guía sus creaciones con una mirada firme y orientadora.</p>
+
+<cite>Por Abel Cabans :)</cite>
