@@ -22,15 +22,13 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.m?js$/, // regex to select only .js files
-				exclude: /(node_modules|bower_components)/, // exclude these directories
+				test: /\.m?js$/,
+				exclude: /(node_modules)/,
 				use: {
-					loader: 'babel-loader', // use babel-loader for transpiling
-					options: {
-						presets: ['@babel/preset-env'] // use this preset
-					}
+				  // `.swcrc` can be used to configure swc
+				  loader: "swc-loader"
 				}
-			}
+			  }
 		]
 	},
 	devtool: process.env.ELEVENTY_ENV === 'development' ? 'source-map' : false,

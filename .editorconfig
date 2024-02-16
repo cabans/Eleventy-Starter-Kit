@@ -1,0 +1,19 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# WHY I USE TABS INSTEAD OF SPACES
+# Using tabs instead of spaces enhances accessibility by allowing customization,
+# easing navigation with assistive tech, reducing physical strain, and supporting
+# diverse developer needs. It promotes an inclusive coding environment.
+# More info: https://www.google.com/search?q=tabs+over+spaces+accesibility
+
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = tab
+indent_size = 2
