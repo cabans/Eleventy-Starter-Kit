@@ -1,59 +1,29 @@
 ---
 layout: default
+lang: en
 ---
 
+<header>
+	<div class="icons">
+		{% icon "gear" %}
+		{% icon "check-circle" %}
+		{% icon "plugin" %}
+	</div>
+	<h1>Hello world!</h1>
+	<h2>This is a simple Eleventy (11ty) Starter Kit</h2>
+</header>
 
-<h1>Hello world!</h1>
 
 {% image
 	"./src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg",
 	"photo of Alin Andersen of a Mountain on Austria",
-	"image wide-width",
+	"hero-image wide-width",
 	"(min-width: 30em) 50vw, 100vw"
 %}
 
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda natus commodi voluptates quam quisquam harum animi tenetur dolores error officiis et, voluptatibus dolorem consequatur repellat repudiandae ut magni, fugit quod.</p>
+<p>In the realm of code, where the digital dreams knit,
+	Lies a tool of power, the Eleventy Starter Kit.
+	A beacon for builders in the web's vast expanse,
+	It guides their creations with a steady, guiding glance.</p>
 
-{% image
-	"./src/assets/img/pexels-pixabay-45201.jpg",
-	"photo of a cat",
-	"image image-sm",
-	"(min-width: 30em) 50vw, 100vw"
-%}
-
-<div class="full-width bg-primary">
-	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda natus
-		commodi voluptates quam quisquam harum animi tenetur dolores error officiis
-		et, voluptatibus dolorem consequatur repellat repudiandae ut magni, fugit
-		quod.</p>
-</div>
-
-{% image
-	"./src/assets/img/github-mark.png",
-	"eg proto",
-	"image image-xs",
-	"(min-width: 50em) 50vw, 100vw"
-%}
-
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda natus commodi voluptates quam quisquam harum animi tenetur dolores error officiis et, voluptatibus dolorem consequatur repellat repudiandae ut magni, fugit quod.</p>
-
-<div>
-	{% icon "check-circle" %}
-</div>
-
-
-<div class="swiper-container">
-{% for i in [1, 2, 3, 4, 5] %}
-	<div class="swiper-slide">
-		{% image
-			"./src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg",
-			"photo of Alin Andersen of a Mountain on Austria",
-			"image wide-width",
-			"(min-width: 30em) 50vw, 100vw"
-		%}
-
-	</div>
-{% endfor %}
-
-
-</div>
+<cite>By Abel Cabans :)</cite>

@@ -16,8 +16,13 @@
     "build": "npm-run-all clean --parallel build:eleventy build:webpack --sequential build:sass build:cleancss"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Abel Cabans",
+	"homepage": "https://github.com/cabans/Eleventy-Starter-Kit#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cabans/Eleventy-Starter-Kit.git"
+  },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.8",
