@@ -5,34 +5,55 @@ layout: default
 
 <h1>Hello world!</h1>
 
-{% image "./src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg", "photo of Alin Andersen of a Mountain on Austria", "image-class", "(min-width: 30em) 50vw, 100vw" %}
+{% image
+	"./src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg",
+	"photo of Alin Andersen of a Mountain on Austria",
+	"image wide-width",
+	"(min-width: 30em) 50vw, 100vw"
+%}
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda natus commodi voluptates quam quisquam harum animi tenetur dolores error officiis et, voluptatibus dolorem consequatur repellat repudiandae ut magni, fugit quod.</p>
 
 {% image
 	"./src/assets/img/pexels-pixabay-45201.jpg",
 	"photo of a cat",
-	"image-class image-sm",
+	"image image-sm",
 	"(min-width: 30em) 50vw, 100vw"
 %}
 
+<div class="full-width bg-primary">
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda natus
+		commodi voluptates quam quisquam harum animi tenetur dolores error officiis
+		et, voluptatibus dolorem consequatur repellat repudiandae ut magni, fugit
+		quod.</p>
+</div>
+
 {% image
-	"./src/assets/img/egfinal.png",
+	"./src/assets/img/github-mark.png",
 	"eg proto",
-	"image-class image-sm",
+	"image image-xs",
 	"(min-width: 50em) 50vw, 100vw"
 %}
 
-{% image
-	"./src/assets/img/crown-winner.svg",
-	"crow winner icon",
-	"icon"
-%}
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda natus commodi voluptates quam quisquam harum animi tenetur dolores error officiis et, voluptatibus dolorem consequatur repellat repudiandae ut magni, fugit quod.</p>
 
 <div>
-{% icon "account" %}
+	{% icon "check-circle" %}
 </div>
 
 
+<div class="swiper-container">
+{% for i in [1, 2, 3, 4, 5] %}
+	<div class="swiper-slide">
+		{% image
+			"./src/assets/img/alin-andersen-f0SgAs27BYI-unsplash.jpg",
+			"photo of Alin Andersen of a Mountain on Austria",
+			"image wide-width",
+			"(min-width: 30em) 50vw, 100vw"
+		%}
 
-<svg class="icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="crow winner icon">
-  <use xlink:href="/assets/icons.svg#svg-pencil-box"></use>
-</svg>
+	</div>
+{% endfor %}
+
+
+</div>
