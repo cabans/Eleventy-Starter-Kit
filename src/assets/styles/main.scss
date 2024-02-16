@@ -1,7 +1,17 @@
-$font-family-sans-serif: 'Inter', sans-serif;
-$primary: red;
+$font-family-sans-serif: system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$primary: hsl(48, 100%, 50%);
 $background: lightgray;
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
 
 body {
 	font-family: $font-family-sans-serif;
@@ -21,7 +31,7 @@ img {
 
 picture {
 	display: block;
-	max-width: 64rem;
+	max-width: 100%;
 
 	img {
 		display: block;
@@ -51,6 +61,10 @@ nav {
 	overflow: hidden;
 }
 
+.image-xs {
+	max-width: 10rem;
+}
+
 .image-sm {
 	max-width: 30rem;
 }
@@ -62,4 +76,38 @@ nav {
 .icon {
 	width: 2rem;
 	height: 2rem;
+}
+
+.bg-primary {
+	background-color: $primary;
+	padding: 1rem;
+}
+
+.main-content {
+	display: grid;
+	grid-template-columns:
+		[full-start] 4rem [wide-start] 4rem [content-start] 1fr [content-end] 4rem [wide-end] 4rem [full-end];
+}
+
+.main-content {
+	gap: 1em 0;
+
+	& > * {
+		grid-column: content;
+	}
+}
+
+.wide-width {
+	grid-column: wide;
+}
+
+.full-width {
+	grid-column: full;
+	display: grid;
+	grid-template-columns: inherit;
+}
+
+.main-content > :not(.wide-width, .full-width),
+.full-width > :not(.wide-width, .full-width) {
+	grid-column: content;
 }
