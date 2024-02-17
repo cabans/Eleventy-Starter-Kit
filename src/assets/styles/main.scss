@@ -95,6 +95,16 @@ nav {
 	font-size: var(--size-sm);
 }
 
+section {
+	display: flex;
+	gap: 0.5em;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: var(--size-sm);
+	margin-inline: auto;
+	max-width: 42rem;
+}
+
 .visually-hidden {
 	position: absolute;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -125,8 +135,9 @@ nav {
 .main-content {
 	display: grid;
 	gap: 2rem 0;
-	grid-template-columns: 15vw [wide-start] 5vw [content-start] 1fr [content-end] 5vw [wide-end] 15vw;
+	grid-template-columns: 20vw [wide-start] 5vw [content-start] 1fr [content-end] 5vw [wide-end] 20vw;
 	font-size: var(--size-md);
+	padding-block: 2rem;
 
 	& > * {
 		grid-column: content;
