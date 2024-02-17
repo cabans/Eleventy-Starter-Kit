@@ -1,6 +1,5 @@
-import moduleChild from './modules/module-child.js';
+import partialScript from './modules/partial-script.js'
 
-moduleChild();
+partialScript()
 
 console.log('main.js is loaded')
-
