@@ -13,7 +13,8 @@
     "build:webpack": "ELEVENTY_ENV=production webpack --config webpack.config.js",
     "watch:webpack": "ELEVENTY_ENV=development webpack --config webpack.config.js -w",
     "start": "npm-run-all build:sass --parallel watch:* --print-label",
-    "build": "npm-run-all clean --parallel build:eleventy build:webpack --sequential build:sass build:cleancss"
+    "build": "npm-run-all clean --parallel build:eleventy build:webpack --sequential build:sass build:cleancss",
+		"bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "Abel Cabans",
