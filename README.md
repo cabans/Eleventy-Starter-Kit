@@ -20,14 +20,14 @@ A simple [Eleventy](https://www.11ty.dev/) (11ty) Starter Kit, that it works as 
 To install the necessary packages, run the command on your package manager flavor of choice:
 
 ```sh
-# Node Package Manager
-npm install
+# pnpM Package Manager (or npm if is your preference)
+pnpM install 
 ```
 
 ### Commands
 
-* Run `npm start` for a development server and live reloading
-* Run `npm run build` to generate a production build (output in `dist` folder)
+* Run `pnpm start` for a development server and live reloading
+* Run `pnpm run build` to generate a production build (output in `dist` folder)
 
 ## CSS
 
